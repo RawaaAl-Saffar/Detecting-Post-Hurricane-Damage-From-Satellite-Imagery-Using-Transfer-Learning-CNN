@@ -1,30 +1,17 @@
 # Detecting-Post-Hurricane-Damage-From-Satellite-Imagery-Using-Transfer-Learning-CNN
 
-Satellite Images of Hurricane Damage
-Overview
 
-The data used in this notebook are satellite images from the Greater Houston area after Hurricane Harvey in 2017. Each image has been labelled as either "Flooded/Damaged" or "Undamaged".
+# Motivation
 
-The data is available for download here, and the study associated with the dataset is available here.
+As many of Houstonians, I was impacted by hurricane Harvey as well as my beloved once's. when I started to hear more and more accounts of rescuers being delayed getting to those who needed help, I started to search and think for a safer and faster rescue efforts.
 
-Motivation
+I published a paper regarding this approach [Detecting Damaged Buildings on Post-Hurricane 
+Satellite Imagery based on Transfer Learning](https://go.gale.com/ps/i.do?id=GALE%7CA695152561&sid=googleScholar&v=2.1&it=r&linkaccess=abs&issn=13035150&p=AONE&sw=w&userGroupName=anon%7E22824d61) 
 
-As stated in the abstract of the associated study:
+# Solution
 
-After a hurricane, damage assessment is critical to emergency managers for efficient response and resource allocation. One way to gauge the damage extent is to quantify the number of flooded/damaged buildings, which is traditionally done by ground survey. This process can be labor-intensive and time-consuming.
+Machine learning algorithms to identify and classify structural damages caused by floods through satellite images, these models can be used for various fields such as Structural Health Monitoring (SHM), vehicles, rails, and roads.
 
-One way to improve the efficiency of building damage assessment is to identify flooded/damaged buildings from satellite remote sensing data alone.
+# Method
+Convolution Neural Network (CNN) is used to detect damage and no damage images form satellite imagery using different classifiers. The dataset used belongs to the hurricane Harvey that caused several damages in the Houston area. In addition, 1D-convolutional neural network (CNN) was used to look at the weekend joints of the frames in buildings. The model consisted of CNN with residual learning modules and multi-scale modules was applied to explore the mode shapes by extracting the damaged properties. A spatial relation was founded using Gate Recurrent Unit (GRU) and CNN to detect the damaged parts of the structural building.
 
-Method
-
-In this notebook, I train a convolutional neural network to identify flooded/damaged buildings.
-
-In particular, I use transfer learning with fine-tuning to achieve high accuracy while minimizing the amount of compute required to train the classifier.
-
-Note that the notebook was executed using a Kaggle GPU kernel, so if you are viewing this notebook on GitHub, the images themselves have not been downloaded into the GitHub repository. However, you can still execute this notebook by either downloading the data using the links above, or forking this notebook on Kaggle here.
-
-Also, as this was my first experience using TensorFlow and Keras, I found the following websites to be particularly helpful in getting the model up and running:
-
-https://www.tensorflow.org/tutorials/load_data/images
-https://www.tensorflow.org/tutorials/images/transfer_learning
-https://www.tensorflow.org/guide/data
